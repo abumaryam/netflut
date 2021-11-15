@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screen/my_home_page.dart';
+import 'screen/create_layanan.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'NetFlut',
-      home: MyHomePage(),
+      home: CreateLayanan(),
     );
   }
 }
