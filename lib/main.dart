@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screen/create_layanan.dart';
+import 'screen/auth_checker.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'NetFlut',
-      home: CreateLayanan(),
+      home: AuthChecker(),
     );
   }
 }

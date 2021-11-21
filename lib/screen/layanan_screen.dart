@@ -6,8 +6,8 @@ import 'package:http/http.dart' as http;
 import '../model/layanan.dart';
 
 Future<Layanan> fetchLayanan() async {
-  final response = await http.get(Uri.parse(
-      'https://e20e-2404-c0-8410-26dc-2084-51c2-f769-d056.ngrok.io/cybercampus/public/api/layanan/8'));
+  final response = await http
+      .get(Uri.parse('https://alamatserver/cybercampus/public/api/layanan/8'));
 
   if (response.statusCode == 200) {
     return Layanan.fromJson(jsonDecode(response.body));
@@ -47,8 +47,6 @@ class _LayananScreenState extends State<LayananScreen> {
             } else if (snapshot.hasError) {
               return Text('${snapshot.error}');
             }
-
-            // By default, show a loading spinner.
             return const CircularProgressIndicator();
           },
         ),

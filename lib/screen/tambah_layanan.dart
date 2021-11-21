@@ -8,8 +8,7 @@ import '../model/layanan.dart';
 Future<Layanan> createLayanan(
     String namaLayanan, String deskripsiLayanan) async {
   final response = await http.post(
-    Uri.parse(
-        'https://e20e-2404-c0-8410-26dc-2084-51c2-f769-d056.ngrok.io/cybercampus/public/api/layanan'),
+    Uri.parse('https://alamatserver/cybercampus/public/api/layanan'),
     headers: <String, String>{
       'Content-Type': 'application/json; charset=UTF-8',
     },
@@ -26,16 +25,16 @@ Future<Layanan> createLayanan(
   }
 }
 
-class CreateLayanan extends StatefulWidget {
-  const CreateLayanan({Key? key}) : super(key: key);
+class TambahLayanan extends StatefulWidget {
+  const TambahLayanan({Key? key}) : super(key: key);
 
   @override
-  _CreateLayananState createState() {
-    return _CreateLayananState();
+  _TambahLayananState createState() {
+    return _TambahLayananState();
   }
 }
 
-class _CreateLayananState extends State<CreateLayanan> {
+class _TambahLayananState extends State<TambahLayanan> {
   final TextEditingController _controllerNama = TextEditingController();
   final TextEditingController _controllerDeskripsi = TextEditingController();
   Future<Layanan>? _futureLayanan;
